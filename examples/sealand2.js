@@ -8,12 +8,28 @@ backward = new Events();
 // These are based on topic path - the finer grained pattern will be used.
 // Examples below
 
-forward.on("Sealand2/#", function(payload) {
+forward.on("Chayahue/#", function(payload) {
     return {
             dataType: "Float",
             value: parseFloat(payload)
          };
 });
+
+forward.on("Blumar/#", function(payload) {
+    return {
+            dataType: "Float",
+            value: parseFloat(payload)
+         };
+});
+
+
+forward.on("testing/#", function(payload) {
+    return {
+            dataType: "Float",
+            value: parseFloat(payload)
+         };
+});
+
 
 backward.on("$SYS/broker/bytes/#", function(variant) {
             return {
